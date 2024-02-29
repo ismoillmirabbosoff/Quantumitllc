@@ -199,7 +199,6 @@ extraConfigurationFiles:
   logstash.yml: |
     http.host: 0.0.0.0
 
-extraConfigurationFiles: {}
 ## @param enableMultiplePipelines Allows user to use multiple pipelines
 ## ref: https://www.elastic.co/guide/en/logstash/master/multiple-pipelines.html
 ##
