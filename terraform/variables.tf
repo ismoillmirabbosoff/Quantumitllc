@@ -45,4 +45,7 @@ variable "kubernetes_prometheues_namespace" {
 }
 
 
-
+variable "kubernetes_prometheus_namespace" {
+    type = string
+    default = "grafana"
+}

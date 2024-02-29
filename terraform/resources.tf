@@ -82,14 +82,6 @@ resource "digitalocean_record" "argocd" {
   value  = data.kubernetes_service_v1.ingress_svc.status.0.load_balancer.0.ingress.0.ip
 }
 
-resource "digitalocean_record" "monitoring" {
-  depends_on = [ data.kubernetes_service_v1.ingress_svc ]
-  domain = digitalocean_domain.shopnest_dot_uz.id
-  type   = "A"
-  name   = "monitoring"
-  value  = data.kubernetes_service_v1.ingress_svc.status.0.load_balancer.0.ingress.0.ip
-}
-
 resource "digitalocean_record" "elasticsearch" {
   depends_on = [ data.kubernetes_service_v1.ingress_svc ]
   domain = digitalocean_domain.shopnest_dot_uz.id
